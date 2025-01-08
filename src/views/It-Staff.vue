@@ -2,7 +2,7 @@
   <section class="cta-one" >
     <div class="container text-center">
       <h3 class="cta-one__title">Make a contact with our IT staffs. Cal Us?</h3><!-- /.cta-one__title -->
-      <p class="cta-one__phone">+48 730 469 581</p><!-- /.cta-one__phone -->
+      <p class="cta-one__phone">+92 3007933900</p><!-- /.cta-one__phone -->
     </div><!-- /.container -->
   </section>
 

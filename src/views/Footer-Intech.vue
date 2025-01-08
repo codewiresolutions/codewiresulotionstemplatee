@@ -18,10 +18,19 @@
 
               <div class="footer-widget__social">
 
-                <a href="https://www.facebook.com/" class="icon-style"> <font-awesome-icon :icon="['fab', 'facebook']" /></a>
-                <a href="https://www.linkedin.com/" class="icon-style"> <font-awesome-icon :icon="['fab', 'linkedin']" /></a>
-                <a href="https://twitter.com/" class="icon-style">    <font-awesome-icon :icon="['fab', 'twitter']" /></a>
-                <a href="https://vimeo.com/" class="icon-style"> <font-awesome-icon :icon="['fab', 'vimeo-v']" /></a>
+                <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/" class="icon-style" target="_blank">
+                  <font-awesome-icon :icon="['fab', 'facebook']" />
+                </a>
+                <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/" class="icon-style" target="_blank">
+                  <font-awesome-icon :icon="['fab', 'linkedin']" />
+                </a>
+                <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/" class="icon-style" target="_blank">
+                  <font-awesome-icon :icon="['fab', 'twitter']" />
+                </a>
+                <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/" class="icon-style" target="_blank">
+                  <font-awesome-icon :icon="['fab', 'vimeo-v']" />
+                </a>
+
               </div><!-- /.footer-widget__social -->
 
             </div>
@@ -34,35 +43,38 @@
   <div class="menu-quick-link-container">
     <ul id="menu-quick-link" class="menu">
         <li id="menu-item-721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-721">
-            <a href="http://el.commonsupport.com/newwp/intech/about-one/">About Us</a></li>
+            <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/">About Us</a></li>
             <li id="menu-item-723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723">
-              <a href="http://el.commonsupport.com/newwp/intech/services/">Services</a></li>
+              <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/">Services</a></li>
             <li id="menu-item-972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-972">
-              <a href="http://el.commonsupport.com/newwp/intech/our-blog/">Our Blog</a></li>
+              <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/">Our Blog</a></li>
             <li id="menu-item-976" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-976">
-              <a href="http://el.commonsupport.com/newwp/intech/pricing/">Pricing</a></li>
+              <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/">Pricing</a></li>
             <li id="menu-item-724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-724">
-              <a href="http://el.commonsupport.com/newwp/intech/contact/">Contact Us</a></li>
+              <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/">Contact Us</a></li>
           </ul></div></div></div>
         <div class="col-lg-3 col-md-6 col-sm-12 pt-3"><div id="nav_menu-2" class="footer-widget widget widget_nav_menu">
         <h3 class="footer-widget__title">Services</h3><div class="menu-services-container"><ul id="menu-services" class="menu">
         <li id="menu-item-726" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-726">
-          <a href="http://el.commonsupport.com/newwp/intech/multi-function-services/">Web Application Development</a></li>
+          <a href="#">Web Application Development</a></li>
           <li id="menu-item-727" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-727">
-              <a href="http://el.commonsupport.com/newwp/intech/managed-it-services/">Mobile Application Development</a></li>
+              <a href="#">Mobile Application Development</a></li>
             <li id="menu-item-728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-728">
-              <a href="http://el.commonsupport.com/newwp/intech/cyber-security/">DevOps Solutions & Services</a></li>
+              <a href="#">DevOps Solutions & Services</a></li>
             <li id="menu-item-729" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-729">
-              <a href="http://el.commonsupport.com/newwp/intech/data-management/">UI/UX Design</a></li>
+              <a href="#">UI/UX Design</a></li>
             <li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730">
-              <a href="http://el.commonsupport.com/newwp/intech/cloud-computing/">Digital Transformation</a></li>
+              <a href="#">Digital Transformation</a></li>
           </ul></div></div></div>
           <div class="col-lg-3 col-md-6 col-sm-12 pt-3">
             <div id="intech_contact_info-2" class="footer-widget widget widget_intech_contact_info">
             <h3 class="footer-widget__title">Contact Info</h3><!-- /.footer-widget__title -->
-            <p class="footer-widget__text">Flat 20, Reynolds Neck, North Hele naville, FV77 8WS</p>
+            <p class="footer-widget__text">Street#1, house#66, block Z tehmoor shaheed colony vehari
+
+              City vehari
+            </p>
             <!-- /.footer-widget__text -->
-            <p class="footer-widget__text">+48 730 469 581</p><!-- /.footer-widget__text -->
+            <p class="footer-widget__text">+92 3087933900</p><!-- /.footer-widget__text -->
             <p class="footer-widget__text">info@codewiresolutions.com</p><!-- /.footer-widget__text --><!-- /.footer-widget -->
 
           </div></div>

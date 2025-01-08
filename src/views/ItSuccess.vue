@@ -17,9 +17,9 @@
                 Trust us for unparalleled service and proactive problem-solving.</p><!-- /.block-title__text -->
             </div><!-- /.block-title -->
             <div class="cta-three__btn-block">
-              <a href="http://el.commonsupport.com/newwp/intech/about-one/" class="thm-btn cta-three__btn-one">Read More</a>
+              <a href="#" class="thm-btn cta-three__btn-one">Read More</a>
 
-              <a href="http://el.commonsupport.com/newwp/intech/contact/" class="thm-btn cta-three__btn-two">Contact Us</a>
+              <a href="#" class="thm-btn cta-three__btn-two">Contact Us</a>
             </div><!-- /.cta-three__btn-block -->
           </div>
         </div>

@@ -9,9 +9,9 @@
           <p class="blog-one__text" style="padding-right: 18px">Codewire Solutions delivers innovative custom
             software and expert consulting for businesses using cutting-edge technology...</p>
           <div class="blog-one__meta">
-            <img alt="" src="/images/news.png" srcset="http://2.gravatar.com/avatar/e7b9b29c4fdd4d4ec28699064fe80204?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40">                                        <span class="blog-one__meta-text">
-											by <a href="http://el.commonsupport.com/newwp/intech/author/admin/" class="blog-one__author">admin</a> /
-											<a href="http://el.commonsupport.com/newwp/intech/2021/03/" class="blog-one__date">March 13, 2021</a>
+            <img alt="" src="/images/news.png" class="avatar avatar-40 photo" height="40" width="40">                                        <span class="blog-one__meta-text">
+											by <a href="#" class="blog-one__author">admin</a> /
+											<a href="#" class="blog-one__date">March 13, 2021</a>
 										</span>
           </div>
         </div>

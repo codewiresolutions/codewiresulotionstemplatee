@@ -231,6 +231,15 @@ color: #FFFFFF;
     margin-top: -135px ;
 
 }
+
+@media only screen and (max-width: 1200px) {
+    .container-book{
+
+
+
+        margin-top: 25px;
+    }
+}
 .inner-cont{
     background-color:#5538F4;
     background-image: url(http://el.commonsupport.com/newwp/intech/wp-content/themes/intech/assets/images/background/appointment-bg-1-1.jpg) !important;
@@ -243,14 +252,7 @@ color: #FFFFFF;
     z-index: 99;
 
 }
-@media only screen and (max-width: 1200px) {
-    .container-book{
 
-
-
-        margin-top: 25px;
-    }
-}
 .app-one-title{
     margin: 0;
     color: #fff;

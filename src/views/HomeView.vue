@@ -11,63 +11,67 @@ import CounterBlue from '@/views/Counter-Blue.vue'
 import Contact from '@/views/contact.vue'
 import ItStaff from '@/views/It-Staff.vue'
 import FooterIntech from '@/views/Footer-Intech.vue'
+import SliderView from '@/views/SliderView.vue'
+
+
+
+
 
 </script>
 
 <template>
   <div class="p-0 m-0">
-    <header class="site-header">
-
-
-      <nav class="navbar  fixed-top navbar-expand-lg header-navigation nav-stk ">
-        <div class="container-fluid  container-main">
-
+    <header class="site-header  ">
+      <nav class="navbar fixed-top navbar-expand-lg header-navigation nav-stk">
+        <div class="container-fluid container-main">
           <div class="logo-box">
             <a href="#">
-              <!-----     <img src="/images/logo3.jpeg" alt="Logo"  style="height: 44px; object-fit: cover">------>
-              <img src="/images/logo.png"
-                   style="height: 44px; object-fit: cover">
-
-
+              <img src="/images/logo.png" style="height: 44px; object-fit: cover" />
             </a>
-
           </div>
-          <a class="navbar-brand" href="#"></a>
-
-          <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                  aria-controls="offcanvasNavbar" aria-label="Toggle navigation" fdprocessedid="ya5e2f"
-                  style="background-color: #21D6DA; color: #FFFFFF">
-            <span class="navbar-toggler-icon "></span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            @click="toggleOffcanvas"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+            :style="{ backgroundColor: '#21D6DA', color: '#FFFFFF', position:'relative' }"
+          >
+            <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="offcanvas offcanvas-end bg-primary " tabindex="-1" id="offcanvasNavbar"
-               aria-labelledby="offcanvasNavbarLabel">
+          <div
+            class="offcanvas offcanvas-end bg-dark"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+            :class="{ show: isOffcanvasOpen }"
+            style="transition: transform 0.3s ease-in-out"
+          >
             <div class="offcanvas-header">
-
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <button type="button" class="btn-close" @click="toggleOffcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body ">
+            <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 margin-nav">
                 <li class="menu-item-12">
-                  <a title="Home" href="#" class="home-hd1">Home</a>
+                  <a class=" home-hd1" href="#" @click="toggleOffcanvas">Home</a>
                 </li>
                 <li class="menu-item-12">
-                  <a title="Home" href="#it-solutions" class="home-hd2">About</a>
+                  <a class=" home-hd2" href="#it-solutions" @click="toggleOffcanvas">About</a>
                 </li>
                 <li class="menu-item-12">
-                  <a title="Home" href="#it-service" class="home-hd2">Services</a>
+                  <a class=" home-hd2" href="#it-service" @click="toggleOffcanvas">Services</a>
                 </li>
                 <li class="menu-item-12">
-                  <a title="Home" href="#best-expert" class="home-hd2">Pages</a>
+                  <a class=" home-hd2" href="#best-expert" @click="toggleOffcanvas">Pages</a>
                 </li>
                 <li class="menu-item-12">
-                  <a title="Home" href="#project" class="home-hd2">News</a>
+                  <a class=" home-hd2 " href="#project" @click="toggleOffcanvas">News</a>
                 </li>
                 <li class="menu-item-12">
-                  <a title="Home" href="#footer" class="home-hd2">Contact</a>
+                  <a class=" home-hd2" href="#footer" @click="toggleOffcanvas">Contact</a>
                 </li>
               </ul>
-
             </div>
           </div>
         </div>
@@ -75,38 +79,13 @@ import FooterIntech from '@/views/Footer-Intech.vue'
 
 
     </header>
+<div class="container-fluid  p-0 m-0">
+  <slider-view></slider-view>
+</div>
     <!----------------------------Welcome Section--------------->
 
 
-    <div class="container-fluid p-0 m-0  ">
-      <div class="row p-0 m-0 banner-one"
-           style="  background-image: url('/images/slider-bg-1-1.png');
-                 position: relative;
-        height: 140vh;
-        background-size: cover !important;
-        background-repeat: no-repeat;  ">
 
-
-        <div class="col-xxl-6 col-lg-6 col-sm-12 padding-wel">
-          <p class="provide-wel">We Provide IT-Services</p>
-          <h3 class="keep-wel">Keep Secure Your <br> IT-Service</h3>
-          <p class="provide-wel2">We provide comprehensive IT services to ensure the security and
-            efficiency of your technology infrastructure.</p>
-          <button class=" btn-learn">Learn More</button>
-
-
-        </div>
-        <div class="main-wel col-xxl-6 col-lg-6 col-sm-12">
-          <img src="/images/banner-person-2-1.png"
-               class="banner-one-p" style="height: 695px important; width: 594px; ">
-
-        </div>
-
-
-      </div>
-
-
-    </div>
 
 
     <!----------------------------End Welcome Section-------------->
@@ -123,31 +102,66 @@ import FooterIntech from '@/views/Footer-Intech.vue'
           <p class="app-one-text">Book an appointment for IT services to ensure the security and efficiency of your systems.</p>
           <div class="app-one__form">
             <div class=" card-row">
-              <div class="row ">
+              <div class="row">
                 <div class="col-lg-4 col-md-12">
-             <span class="wpcf7-form-control-wrap your-name-wrap">
-              <input class="form-input text-white" placeholder="Your name"></span>
-
-
+        <span class="wpcf7-form-control-wrap your-name-wrap">
+          <input
+            class="form-input text-white"
+            placeholder="Your name"
+            v-model="contact.name"
+          />
+        </span>
+                  <!-- Display validation error for name -->
+                  <p v-if="errors.name" class="text-danger">{{ errors.name[0] }}</p>
                 </div>
                 <div class="col-lg-4 col-md-12">
-             <span class="wpcf7-form-control-wrap your-name-wrap">
-              <input class="form-input text-white" placeholder="Your email"></span>
-
+        <span class="wpcf7-form-control-wrap your-name-wrap">
+          <input
+            class="form-input text-white"
+            placeholder="Your email"
+            v-model="contact.email"
+          />
+        </span>
+                  <!-- Display validation error for email -->
+                  <p v-if="errors.email" class="text-danger">{{ errors.email[0] }}</p>
                 </div>
                 <div class="col-lg-4 col-md-12">
-             <span class="wpcf7-form-control-wrap your-name-wrap">
-              <input class="form-input text-white" placeholder="---"></span>
-
+        <span class="wpcf7-form-control-wrap your-name-wrap">
+          <input
+            class="form-input text-white"
+            placeholder="Phone Number"
+            v-model="contact.phone_number"
+          />
+        </span>
+                  <!-- Display validation error for phone_number -->
+                  <p v-if="errors.phone_number" class="text-danger">{{ errors.phone_number[0] }}</p>
+                </div>
+                <div class="col-lg-8 col-md-12">
+        <span class="wpcf7-form-control-wrap your-name-wrap">
+          <textarea
+            class="form-input-query"
+            placeholder="Description"
+            v-model="contact.description"
+          ></textarea>
+        </span>
+                  <!-- Display validation error for description -->
+                  <p v-if="errors.description" class="text-danger">{{ errors.description[0] }}</p>
                 </div>
                 <div class="col-lg-12">
                   <div class="app-one__bottom">
-                    <p class="app-one-text">Schedule an appointment with <strong>Codewire Sulotions</strong> today for <strong>IT
-                      services</strong> to enhance the security and efficiency of your systems,
-                       <br>
-                      and receive customized support designed specifically for your needs.</p>
-                    <button class=" btn-learn">Get Appointment</button>
-
+                    <p class="app-one-text">
+                      Schedule an appointment with <strong>Codewire Solutions</strong> today for
+                      <strong>IT services</strong> to enhance the security and efficiency of your systems,
+                      <br />
+                      and receive customized support designed specifically for your needs.
+                    </p>
+                    <button
+                      class="btn-learn"
+                      style="position: relative;"
+                      @click="submitContactForm"
+                    >
+                      Get Appointment
+                    </button>
                   </div>
                 </div>
               </div>
@@ -323,18 +337,22 @@ import FooterIntech from '@/views/Footer-Intech.vue'
 
 
 
-<script>
 
+
+<script>
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide } from 'vue3-carousel';
+import { ref } from 'vue';
+import axios from 'axios';
+
 export default {
   components: {
     Carousel,
     Slide,
   },
   data() {
-
     return {
+      text: "We Provide IT-Services",
       isHovered1: false,
       isHovered2: false,
       isHovered3: false,
@@ -346,106 +364,150 @@ export default {
       tabs: [
         {
           title: 'Our Mission1',
-          content: '0Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et' +
-            ' dolore magna aliqua enim ad minim veniam quis nostrud exercitation ulac laboris' +
-            ' aliquip ex ea commodo consequat duis aute irure.' +
-            'dolor in repre henderit in voluptate velit esse cillum dolore.',
+          content: 'Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ulac laboris aliquip ex ea commodo consequat duis aute irure.',
           items: ['consectetur elit sed do eius', 'consectetur elit sed', 'consectetur elit sed do'],
           link: 'http://el.commonsupport.com/newwp/intech/about-one/'
         },
         {
           title: 'Our Vision2',
-          content: '2Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna' +
-            ' aliqua enim ad minim veniam quis nostrud exercitation ulac laboris aliquip ex ea commodo ' +
-            'consequat duis aute irure.dolor in repre henderit in voluptate velit esse cillum dolore.',
+          content: 'Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ulac laboris aliquip ex ea commodo consequat duis aute irure.',
           items: ['consectetur elit sed do eius', 'consectetur elit sed', 'consectetur elit sed do'],
           link: 'http://el.commonsupport.com/newwp/intech/about-one/'
         },
         {
           title: 'Awards Win3',
-          content: '3Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna ' +
-            'aliqua enim ad minim veniam quis nostrud exercitation ulac laboris aliquip ex ea ' +
-            'commodo consequat duis aute irure' +
-            '.dolor in repre henderit in voluptate velit esse cillum dolore.',
+          content: 'Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ulac laboris aliquip ex ea commodo consequat duis aute irure.',
           items: ['consectetur elit sed do eius', 'consectetur elit sed', 'consectetur elit sed do'],
           link: 'http://el.commonsupport.com/newwp/intech/about-one/'
         }
-
-      ]
-    }
-
+      ],
+      contact: {
+        name: '',
+        email: '',
+        phone_number: '',
+        description: '',
+      },
+      errors: {}  // Store validation errors here
+    };
   },
   computed: {
     textClass() {
-      return this.isHovered1 ? 'hover-color1' : 'default-color1'
+      return this.isHovered1 ? 'hover-color1' : 'default-color1';
     },
     textcClass() {
-      return this.isHovered2 ? 'hover-color2' : 'default-color2'
+      return this.isHovered2 ? 'hover-color2' : 'default-color2';
     },
-
     textPClass() {
-      return this.isHovered3 ? 'hover-color3' : 'default-color3'
+      return this.isHovered3 ? 'hover-color3' : 'default-color3';
     },
-
     textClass4() {
-      return this.isHovered4 ? 'hover-color4' : 'default-color4'
+      return this.isHovered4 ? 'hover-color4' : 'default-color4';
     },
-
     textcClass5() {
-      return this.isHovered5 ? 'hover-color5' : 'default-color5'
+      return this.isHovered5 ? 'hover-color5' : 'default-color5';
     },
-
     textPClass6() {
-      return this.isHovered6 ? 'hover-color6' : 'default-color6'
+      return this.isHovered6 ? 'hover-color6' : 'default-color6';
     }
   },
   methods: {
     changeColor1() {
-      this.isHovered1 = true
+      this.isHovered1 = true;
     },
     defaultcolor1() {
-      this.isHovered1 = false
+      this.isHovered1 = false;
     },
     changeColor2() {
-      this.isHovered2 = true
+      this.isHovered2 = true;
     },
     defaultcolor2() {
-      this.isHovered2 = false
+      this.isHovered2 = false;
     },
     changeColor3() {
-      this.isHovered3 = true
+      this.isHovered3 = true;
     },
     defaultcolor3() {
-      this.isHovered3 = false
+      this.isHovered3 = false;
     },
     changeColor4() {
-      this.isHovered4 = true
+      this.isHovered4 = true;
     },
     defaultcolor4() {
-      this.isHovered4 = false
+      this.isHovered4 = false;
     },
     changeColor5() {
-      this.isHovered5 = true
+      this.isHovered5 = true;
     },
     defaultcolor5() {
-      this.isHovered5 = false
+      this.isHovered5 = false;
     },
     changeColor6() {
-      this.isHovered6 = true
+      this.isHovered6 = true;
     },
     defaultcolor6() {
-      this.isHovered6 = false
+      this.isHovered6 = false;
     },
-    toggleMenu() {
-      this.isMenuActive = !this.isMenuActive;
-    },
+    // Contact form submission
+    async submitContactForm() {
+      try {
+        // Reset errors before submitting
+        this.errors = {};
+
+        const response = await axios.post('https://backendcodewiresolutions.codewiresolutions.com/api/contacts', this.contact);
+        Swal.fire({
+          title: "Success!",
+          text: "Your contact has been submitted successfully.",
+          icon: "success",
+          confirmButtonText: "OK",
+        });
+        console.log('Contact created successfully:', response.data);
+        // Optionally reset form fields here or show a success message
+        this.contact.name = '';
+        this.contact.email = '';
+        this.contact.phone_number = '';
+        this.contact.description = '';
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        if (error.response && error.response.data.errors) {
+          // Capture validation errors from the backend
+          this.errors = error.response.data.errors;
+        }
+      }
+    }
   }
-}
+};
 
+// Initialize Bootstrap's Offcanvas and close menu on item click
+document.addEventListener('DOMContentLoaded', function () {
+  const offcanvasElement = document.getElementById('offcanvasNavbar');
+  const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
 
+  function closeMenu() {
+    offcanvas.hide();
+  }
+
+  document.querySelectorAll('.navbar-nav a').forEach(item => {
+    item.addEventListener('click', closeMenu);
+  });
+});
+
+const isOffcanvasOpen = ref(false);
+const toggleOffcanvas = () => {
+  isOffcanvasOpen.value = !isOffcanvasOpen.value;
+};
 </script>
 
+
+
 <style scoped>
+
+
+.offcanvas {
+  transform: translateX(100%);
+}
+.offcanvas.show {
+  transform: translateX(0);
+}
 /* Base styles */
 body {
   background: #333;
@@ -545,8 +607,83 @@ body {
 
 /* Styles for the dot/circle */
 
+.container {
+  padding: 20px;
+}
+
+/* Styles for the text element */
+.provide-wel {
+  opacity: 0; /* Start with text hidden */
+  transform: translateY(-210px); /* Start with text slightly moved up */
+  animation: fadeInTop 3s forwards; /* Apply the animation */
+}
+
+/* Define the fade-in from the top animation */
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.container {
+  padding: 20px;
+}
+
+/* Styles for the h3 element */
+.keep-wel {
+  opacity: 0; /* Start with text hidden */
+  transform: translateY(-210px); /* Start with text slightly moved up */
+  animation: fadeInTop 3s forwards; /* Apply the animation */
+}
+.block-service{
+  opacity: 0; /* Start with text hidden */
+  transform: translateY(-210px); /* Start with text slightly moved up */
+  animation: fadeInTop 3s forwards; /* Apply the animation */
+}
+/* Define the fade-in from the top animation */
+
+.provide-wel2 {
+  opacity: 0; /* Start with text hidden */
+  transform: translateY(20px); /* Start with text slightly moved down */
+  animation: fadeInBottom 3s forwards; /* Apply the animation */
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
 
 
 
+
+/* Define the fade-in from the bottom animation */
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.banner-one-p {
+  opacity: 0; /* Start with the image hidden */
+  transform: translateX(200px); /* Start with the image slightly moved right */
+  animation: fadeInRight 3s forwards; /* Apply the animation */
+}
+
+/* Define the fade-in from the right animation */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 </style>
 

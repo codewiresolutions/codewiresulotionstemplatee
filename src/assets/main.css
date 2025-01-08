@@ -1,5 +1,15 @@
 @import './base.css';
+
+
+.navbar-scrolled {
+    background-color: blue !important; /* Change to the color you want when scrolled */
+}
+
+.navbar {
+    background-color: transparent; /* Change to the default color */
+}
 .site-header{
+    transition: background-color 2.44s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -20,6 +30,15 @@
     position: relative;
     background-color: #2D2C2C;
 }
+
+.header-navigationfx{
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    position: relative;
+
+}
 .container-main{
     width: 100%;
     padding-right: 15px;
@@ -37,6 +56,15 @@
     overflow: auto;
 }
 .logo-box{
+    float: left !important;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    top: 50% !important;
+    margin-left: 74px;
+    object-fit: cover;
+
+}
+.logo-boxfix{
     float: left !important;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -63,8 +91,11 @@
     list-style: none;
 }
 .menu-item-12{
+    font-size: 20px;
+    font-weight: bold;
+    color: white !important;
     position: relative;
-    padding: 24px 0;
+    padding: 18px 0;
     display: inline-block;
     vertical-align: middle;
     margin-left: 60px;
@@ -96,8 +127,8 @@
 
 }
 .stricked-menu{
-    background-color: #2D2C2C;
 
+   position: fixed !important;
     top: 0;
     left: 0;
     width: 100%;
@@ -209,6 +240,7 @@
 }
 .btn-learn{
     background-color: #20DFE3 ;
+    margin-top: 12px;
     padding-bottom: 12px;
     padding-top: 12px;
     padding-left: 32px;
@@ -220,8 +252,8 @@
     font-weight: 600;
 }
 .btn-learn:hover{
-background-color: #616161;
-color: #FFFFFF;
+    background-color: #616161;
+    color: #FFFFFF;
 }
 
 <!------------------------END STYLE Welcome Section--------------->
@@ -232,7 +264,7 @@ color: #FFFFFF;
 
 }
 .container-book{
-    width: 89% !important;
+    width: 89% ;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -242,18 +274,7 @@ color: #FFFFFF;
     margin-top: -135px ;
 
 }
-.inner-cont{
-    background-color:#5538F4;
-    background-image:  url('images/book-bg.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    padding: 57px 0;
-    padding-left: 50px;
-    padding-right: 50px;
-    position: relative;
-    z-index: 99;
 
-}
 @media only screen and (max-width: 1200px) {
     .container-book{
 
@@ -262,6 +283,39 @@ color: #FFFFFF;
         margin-top: 25px;
     }
 }
+@media only screen and (max-width: 640px) {
+    .container-book{
+
+        width: 96% ;
+        padding-right: 0;
+        padding-left: 0;
+
+        margin-top: 25px;
+    }
+}
+.inner-cont{
+    background-color:#5538F4;
+    background-image:  url('images/book-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 17px 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+    z-index: 99;
+
+}
+@media only screen and (max-width: 640px) {
+    .inner-cont{
+
+
+        padding-left: 24px;
+        padding-right: 24px;
+
+        margin-top: 25px;
+    }
+}
+
 .app-one-title{
     margin: 0;
     color: #fff;
@@ -278,7 +332,7 @@ color: #FFFFFF;
     padding-top: 8px;
 }
 .app-one__form{
-    margin-top: 35px;
+    margin-top: 15px;
 }
 .card-row{
     display: flex;
@@ -299,6 +353,20 @@ color: #FFFFFF;
     font-size: 15px;
     margin-top: 12px;
 }
+.form-input-query {
+    border: none;
+    outline: none;
+    width: 100%;
+    display: block;
+    color: white;
+    background-color: #645cff;
+    height: 80px; /* You can increase this height as needed */
+    padding-left: 20px;
+    font-size: 15px;
+    margin-top: 24px;
+    resize: vertical; /* Allows the user to resize the textarea vertically */
+}
+
 .app-one__bottom{
     display: flex;
     -ms-flex-wrap: wrap;
@@ -309,7 +377,7 @@ color: #FFFFFF;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 ::placeholder {
     color: white;
@@ -344,7 +412,9 @@ color: #FFFFFF;
     font-weight: 600;
     font-size: 40px;
     line-height: 50px;
+
 }
+
 
 .border-spantitle{
     position: absolute;

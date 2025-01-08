@@ -6,7 +6,7 @@ import ItSolutions from '@/views/It-Solutions.vue'
 import BestExperts from '@/views/Best-experts.vue'
 import ProjectCompleted from '@/views/Project-Completed.vue'
 import OurCustomers from '@/views/Our-Customers.vue'
-
+import PageView1 from '@/views/PageView1.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -29,7 +29,11 @@ const router = createRouter({
       name: 'contact',
       component: contact
     },
-
+    {
+      path: '/PageView1',
+      name: 'PageView1',
+      component: PageView1
+    },
 
 
     {

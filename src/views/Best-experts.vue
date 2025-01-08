@@ -21,18 +21,27 @@
     <div class="col-lg-4 col-md-6 col-sm-12 hover-it" style="text-align: center">
       <div class="team-one__single wow fadeInUp" :data-wow-duration="wowDuration" :data-wow-delay="wowDelay">
         <div class="team-one__image "
-             style=" background-image: url('/images/team-1-1.jpg');"
+             style=" background-image: url('/images/javediqbal.jpeg');"
              @mouseover="changeImageBackground(true,'jose')" @mouseleave="changeImageBackground(false,'jose')">
           <div class="overlay"></div>
           <div class="team-one__social" v-if="isJosIcons">
-            <a href="https://www.facebook.com/" class="icon-style"> <font-awesome-icon :icon="['fab', 'facebook']" /></a>
-            <a href="https://www.linkedin.com/" class="icon-style"> <font-awesome-icon :icon="['fab', 'linkedin']" /></a>
-            <a href="https://twitter.com/" class="icon-style">    <font-awesome-icon :icon="['fab', 'twitter']" /></a>
-            <a href="https://vimeo.com/" class="icon-style"> <font-awesome-icon :icon="['fab', 'vimeo-v']" /></a>
+            <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/" class="icon-style" target="_blank">
+              <font-awesome-icon :icon="['fab', 'facebook']" />
+            </a>
+            <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/" class="icon-style" target="_blank">
+              <font-awesome-icon :icon="['fab', 'linkedin']" />
+            </a>
+            <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/" class="icon-style" target="_blank">
+              <font-awesome-icon :icon="['fab', 'twitter']" />
+            </a>
+            <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/" class="icon-style" target="_blank">
+              <font-awesome-icon :icon="['fab', 'vimeo-v']" />
+            </a>
+
           </div>
         </div>
         <div class="team-one__content ">
-          <h3 class="team-one__title">Jose Day</h3>
+          <h3 class="team-one__title">Javed Iqbal</h3>
           <div class="team-one__designation">CO-FOUNDER</div>
         </div>
       </div>
@@ -40,7 +49,7 @@
     <div class="col-lg-4 col-md-6 col-sm-12 hover-it">
       <div class="team-one__single wow fadeInUp" :data-wow-duration="wowDuration" :data-wow-delay="wowDelay">
         <div class="team-one__image "
-             style="background-image: url('/images/team-1-2.jpg');"
+             style="background-image: url('/images/qasimjaved.jpg');"
              @mouseover="changeImageBackground(true,'nadeem')" @mouseleave="changeImageBackground(false,'nadeem')">
           <div class="overlay"></div>
           <div class="team-one__social" v-if="isNadeemIcons">
@@ -51,7 +60,7 @@
           </div>
         </div>
         <div class="team-one__content ">
-          <h3 class="team-one__title">{{ 'Lee Harvey' }}</h3>
+          <h3 class="team-one__title">{{ 'Qasim Javed' }}</h3>
           <div class="team-one__designation">{{ 'CO-FOUNDER' }}</div>
         </div>
       </div>
