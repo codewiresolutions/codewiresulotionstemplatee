@@ -97,8 +97,8 @@ import SliderView from '@/views/SliderView.vue'
       <div class="container-book">
 
 
-        <div class="inner-cont">
-          <h3 class="app-one-title">Book Appointment</h3>
+        <div class="inner-cont">with Codewire Solutions
+          <h3 class="app-one-title">Book Appointment with Codewire Solutions</h3>
           <p class="app-one-text">Book an appointment for IT services to ensure the security and efficiency of your systems.</p>
           <div class="app-one__form">
             <div class=" card-row">

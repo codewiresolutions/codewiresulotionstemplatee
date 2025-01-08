@@ -25,10 +25,10 @@ import { ref } from 'vue';
 
 // Define the data as reactive properties
 
-const tagline = 'We Provide IT-Services';
-const title = 'Best IT-Solutions ';
-const titlee = 'near the world';
-const description = 'Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna.';
+const tagline = 'Codewire Solutions:';
+const title = 'Leading IT innovations';
+const titlee = 'worldwide.';
+const description = 'Best IT-Solutions near the world, Codewire Solutions leads the way with innovative technology services and expertise.';
 const buttonLink = 'http://el.commonsupport.com/newwp/intech/contact/';
 const buttonText = 'Learn more';
 </script>

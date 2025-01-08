@@ -7,8 +7,8 @@
             <div class="it-solutions-content">
               <div class="it-solutions-title">
                 <h3 class="it-title">
-                  Best IT-Solutions company<br>
-                  near the world
+                  Best IT-Solutions near the world<br>
+                  Codewire Solutions leads the way with innovative technology services and expertise.
                 </h3>
                 <p class="it-text">
                   We provide tailored IT solutions, enhancing efficiency and security

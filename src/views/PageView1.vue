@@ -13,7 +13,7 @@
         background-repeat: no-repeat; display: flex; ">
                   <div class="col-xxl-6 col-lg-6 col-sm-12 padding-wel fade-in-top">
                     <p class="provide-wel">We Provide IT-Services</p>
-                    <h3 class="keep-wel">Keep Secure Your <br> IT-Service</h3>
+                    <h3 class="keep-wel">Keep Secure Your <br> IT-Service with Codewire Solutions</h3>
                     <p class="provide-wel2">We provide comprehensive IT services to ensure the security and efficiency of your technology infrastructure.</p>
                     <button class="btn-learn1">Learn More</button>
                   </div>
