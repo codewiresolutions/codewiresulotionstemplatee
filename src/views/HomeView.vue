@@ -60,10 +60,10 @@ import SliderView from '@/views/SliderView.vue'
                   <a class=" home-hd2" href="#it-solutions" @click="toggleOffcanvas">About</a>
                 </li>
                 <li class="menu-item-12">
-                  <a class=" home-hd2" href="#it-service" @click="toggleOffcanvas">Services</a>
+                  <a class=" home-hd2" href="#it-services" @click="toggleOffcanvas">Services</a>
                 </li>
                 <li class="menu-item-12">
-                  <a class=" home-hd2" href="#best-expert" @click="toggleOffcanvas">Pages</a>
+                  <a class=" home-hd2" href="#best-expert" @click="toggleOffcanvas">Team</a>
                 </li>
                 <li class="menu-item-12">
                   <a class=" home-hd2 " href="#project" @click="toggleOffcanvas">News</a>
@@ -97,7 +97,7 @@ import SliderView from '@/views/SliderView.vue'
       <div class="container-book">
 
 
-        <div class="inner-cont">with Codewire Solutions
+        <div class="inner-cont">
           <h3 class="app-one-title">Book Appointment with Codewire Solutions</h3>
           <p class="app-one-text">Book an appointment for IT services to ensure the security and efficiency of your systems.</p>
           <div class="app-one__form">
@@ -173,13 +173,15 @@ import SliderView from '@/views/SliderView.vue'
         <!-----------------------------------end Book Appoinment---------->
 
 
-        <!------------------------------IT-Services------------>
-        <div class="row " style="        display: flex;
+            <!------------------------------IT-Services------------>
+
+          <section id="it-services">
+           <div class="row " style="        display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;">
-          <div class="block-title text-center">
+              <div class="block-title text-center">
             <h2 class="block-service" style="padding-bottom: 55px;">
               World best IT-Services
               <br>
@@ -187,18 +189,18 @@ import SliderView from '@/views/SliderView.vue'
               <span class="border-span"></span>
             </h2>
           </div>
-          <div class="row">
-            <div class="col-lg-4  col-sm-12 ">
+               <div class="row">
+                 <div class="col-lg-4  col-sm-12 ">
 
-              <div class="hvr-bounce-to-bottom design-up best-it icon-book "
+                 <div class="hvr-bounce-to-bottom design-up best-it icon-book "
                    :class="{ 'hover-color1': isHovered1 }" @mouseover="changeColor1" @mouseout="defaultcolor1">
-                <i :class="textClass" style="color: #5538F4 ;">
+                   <i :class="textClass" style="color: #5538F4 ;">
                   <font-awesome-icon icon="users-gear" />
-                </i>
-                <h3 class="service-one " style="color: black" :class="textClass">
+                  </i>
+                 <h3 class="service-one " style="color: black" :class="textClass">
                   Web Application Development
-                </h3>
-                <p :class="textClass" style="font-size: 14px; color: #888888">Web application development involves creating dynamic,
+                  </h3>
+                   <p :class="textClass" style="font-size: 14px; color: #888888">Web application development involves creating dynamic,
                   interactive online applications tailored to user needs.</p>
               </div>
             </div>
@@ -238,7 +240,7 @@ import SliderView from '@/views/SliderView.vue'
               </div>
             </div>
           </div>
-          <div class="row">
+               <div class="row">
             <div class="col-lg-4  col-sm-12 ">
 
               <div class="hvr-bounce-to-bottom design best-it icon-book "
@@ -290,9 +292,9 @@ import SliderView from '@/views/SliderView.vue'
             </div>
           </div>
 
-        </div>
-
-      </div>
+            </div>
+          </section>
+       </div>
 
 
     </div>

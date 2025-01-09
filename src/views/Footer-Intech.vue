@@ -83,7 +83,7 @@
             <div class="row">
 
               <div class="  col-md-6 col-sm-12  text-white info-item">
-                <span>intech @ 2022 All Right Reserved</span>
+                <span>Codewire 2022 All Right Reserved</span>
               </div>
             <!-- /.site-footer__copy -->
 

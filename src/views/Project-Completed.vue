@@ -1,9 +1,9 @@
 <template>
  <div id="project" style="background-image: url('/images/project-1-1-bg.jpg');
- margin-top: 100px !important;  ">
+ margin-top: 50px !important;  ">
   <div class="container-fluid ">
     <div class="project-title text-center">
-      <h2 class="project-title__title">Thousands of projects completed <br>in 20 countries</h2>
+      <h2 class="project-title__title">Hundreds of projects completed <br>in 20 countries</h2>
     </div>
     <ul class="project-filter text-center project-unstyled">
       <li class="active-all" data-filter=".filter-item"><span>All</span></li>

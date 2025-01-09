@@ -6,14 +6,9 @@
           <div class="block-title">
             <h2 class="block-title__title">Latest news &amp; <br>insights</h2><!-- /.block-title__title -->
           </div><!-- /.block-title -->
-          <p class="blog-one__text" style="padding-right: 18px">Codewire Solutions delivers innovative custom
-            software and expert consulting for businesses using cutting-edge technology...</p>
-          <div class="blog-one__meta">
-            <img alt="" src="/images/news.png" class="avatar avatar-40 photo" height="40" width="40">                                        <span class="blog-one__meta-text">
-											by <a href="#" class="blog-one__author">admin</a> /
-											<a href="#" class="blog-one__date">March 13, 2021</a>
-										</span>
-          </div>
+          <p class="blog-one__text" style="padding-right: 18px">Codewire Solutions provides tailored software solutions, offering expert consulting and leveraging the latest technology to drive business success. We specialize in creating custom applications, optimizing processes, and delivering scalable systems that meet unique business needs. Our innovative approach ensures high-quality,
+            efficient, and cost-effective solutions for businesses of all sizes.</p>
+
         </div>
 
       </div>
