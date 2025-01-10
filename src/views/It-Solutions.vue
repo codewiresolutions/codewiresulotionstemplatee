@@ -144,7 +144,7 @@ export default {
           items: ['UI/UX Design','      Digital Transformation', 'Quality Assurance & Testing',
             ' DevOps Solutions & Services', ' Web Application Development',
             'Mobile Application Development', ],
-          link: 'http://el.commonsupport.com/newwp/intech/about-one/'
+          link: '#'
         },
         {
           title: 'Our Vision2',
@@ -156,7 +156,7 @@ export default {
           items: ['UI/UX Design','      Digital Transformation', 'Quality Assurance & Testing',
             ' DevOps Solutions & Services', ' Web Application Development',
             'Mobile Application Development', ],
-          link: 'http://el.commonsupport.com/newwp/intech/about-one/'
+          link: '#'
         },
         {
           title: 'Awards Win3',
@@ -168,7 +168,7 @@ export default {
           items: ['UI/UX Design','      Digital Transformation', 'Quality Assurance & Testing',
             ' DevOps Solutions & Services', ' Web Application Development',
             'Mobile Application Development', ],
-          link: 'http://el.commonsupport.com/newwp/intech/about-one/'
+          link: '#'
         }
 
       ]

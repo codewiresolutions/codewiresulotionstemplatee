@@ -53,7 +53,7 @@ export default {
     const experts = ref([
       {
         name: 'Javed Iqbal',
-        designation: 'CO-FOUNDER',
+        designation: 'FOUNDER/Architect Software Engineer ',
         image: '/images/javediqbal.jpeg',
         isHovered: false,
         socialLinks: [
@@ -100,6 +100,18 @@ export default {
         ]
       },
       {
+        name: 'Hafiz M Nadeem',
+        designation: 'Mern Stack Developer',
+        image: '/images/mnadeem.jpg',
+        isHovered: false,
+        socialLinks: [
+          { name: 'facebook', url: 'https://www.facebook.com/' },
+          { name: 'linkedin', url: 'https://www.linkedin.com/' },
+          { name: 'twitter', url: 'https://twitter.com/' },
+          { name: 'vimeo-v', url: 'https://vimeo.com/' }
+        ]
+      },
+      {
         name: 'Asif Javed ',
         designation: 'Senior QA Engineer',
         image: '/images/mbashar.jpg',
@@ -113,7 +125,7 @@ export default {
       },
       {
         name: 'Hafiz M Tariq',
-        designation: 'Junior End Developer',
+        designation: 'Junior Front End Developer',
         image: '/images/mbashar.jpg',
         isHovered: false,
         socialLinks: [
@@ -134,19 +146,8 @@ export default {
           { name: 'twitter', url: 'https://twitter.com/' },
           { name: 'vimeo-v', url: 'https://vimeo.com/' }
         ]
-      },
-      {
-        name: 'Hafiz M Nadeem',
-        designation: 'Mern Stack Developer',
-        image: '/images/mnadeem.jpg',
-        isHovered: false,
-        socialLinks: [
-          { name: 'facebook', url: 'https://www.facebook.com/' },
-          { name: 'linkedin', url: 'https://www.linkedin.com/' },
-          { name: 'twitter', url: 'https://twitter.com/' },
-          { name: 'vimeo-v', url: 'https://vimeo.com/' }
-        ]
       }
+
     ]);
 
     // Methods

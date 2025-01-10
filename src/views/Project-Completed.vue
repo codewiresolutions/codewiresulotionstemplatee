@@ -38,7 +38,7 @@
         <span class="image-title">Cyber Security</span>
       </div>
       <div class="project-one__bottom text-center">
-        <a href="http://el.commonsupport.com/newwp/intech/case-study-one/" class="thm-btn project-one__more-btn">All Projects</a><!-- /.thm-btn -->
+        <a href="#" class="thm-btn project-one__more-btn">All Projects</a><!-- /.thm-btn -->
       </div>
     </div>
     <hr class="bookhr-line">

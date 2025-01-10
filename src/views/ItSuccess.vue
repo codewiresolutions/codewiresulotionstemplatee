@@ -9,7 +9,7 @@
           <div class="cta-three__content">
             <div class="block-title">
               <h2 class="block-title__title">We run all kinds of IT Services <br>
-                <span class="block-title__title">that vow your success</span></h2><!-- /.block-title__title -->
+                <span class="block-title__title">that your success</span></h2><!-- /.block-title__title -->
               <p class="block-title__text">
                 Our IT Services are designed to drive your success with tailored solutions, expert support,
                 and innovative technology. From network management to cybersecurity, we provide reliable, efficient,
@@ -56,6 +56,15 @@
   padding-left: 75px;
   padding-right: 50px;
   padding-top: 115px;
+}
+@media only screen and (max-width: 640px) {
+  .cta-three__content{
+
+
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 25px;
+  }
 }
 .block-title{
   margin-bottom: 40px;

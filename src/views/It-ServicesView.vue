@@ -57,6 +57,7 @@
   padding-right: 50px;
   padding-top: 115px;
 }
+
 .block-title{
   margin-bottom: 40px;
 }

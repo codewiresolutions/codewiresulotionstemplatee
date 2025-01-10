@@ -98,7 +98,7 @@
     padding: 18px 0;
     display: inline-block;
     vertical-align: middle;
-    margin-left: 60px;
+    margin-left: 40px;
 }
 .home-hd1{
     color: #21D6DA;
@@ -293,6 +293,44 @@
         margin-top: 25px;
     }
 }
+.container-services{
+    background-color: #F0F1F5 !important;
+    width: 100% ;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    box-sizing: border-box;
+    margin-top: -135px ;
+}
+@media only screen and (max-width: 1200px) {
+    .container-services{
+
+
+
+        margin-top: 0;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .container-services{
+
+        width: 100% ;
+        padding-right: 0;
+        padding-left: 0;
+
+        margin-top: 0;
+    }
+}
+.row-services{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 .inner-cont{
     background-color:#5538F4;
     background-image:  url('images/book-bg.jpg');

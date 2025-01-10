@@ -18,9 +18,9 @@ export default {
   data() {
     return {
       counters: [
-        { number: 0, isRunning: false, intervalId: null, maxNumber: 35 },
+        { number: 0, isRunning: false, intervalId: null, maxNumber: 135 },
         { number: 0, isRunning: false, intervalId: null, maxNumber: 116 },
-        { number: 0, isRunning: false, intervalId: null, maxNumber: 15 },
+        { number: 0, isRunning: false, intervalId: null, maxNumber: 10 },
         { number: 0, isRunning: false, intervalId: null, maxNumber: 4 }, // Ensure maxNumber is a number
       ],
     };
@@ -56,7 +56,7 @@ export default {
       // Define your text for each counter here
       switch (index) {
         case 0:
-          return 'Project Complete';
+          return 'Project Completed';
         case 1:
           return 'Satisfied Clients';
         case 2:

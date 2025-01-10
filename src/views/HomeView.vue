@@ -69,6 +69,9 @@ import SliderView from '@/views/SliderView.vue'
                   <a class=" home-hd2 " href="#project" @click="toggleOffcanvas">News</a>
                 </li>
                 <li class="menu-item-12">
+                  <a class=" home-hd2 " href="#bookappointment" @click="toggleOffcanvas">Book Appointment</a>
+                </li>
+                <li class="menu-item-12">
                   <a class=" home-hd2" href="#footer" @click="toggleOffcanvas">Contact</a>
                 </li>
               </ul>
@@ -93,7 +96,8 @@ import SliderView from '@/views/SliderView.vue'
 
 
     <!----------------------------BOOK Appointment--------->
-    <div class="container-back" style="background-color: #F0F1F5 !important;">
+     <section id="bookappointment">
+        <div class="container-back" style="background-color: #F0F1F5 !important;">
       <div class="container-book">
 
 
@@ -298,6 +302,8 @@ import SliderView from '@/views/SliderView.vue'
 
 
     </div>
+
+     </section>
   <!---->
 
     <!---------------------END ItSevicesView--------------->
