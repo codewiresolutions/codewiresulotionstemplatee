@@ -19,7 +19,7 @@
             <div class="cta-three__btn-block">
               <a href="#" class="thm-btn cta-three__btn-one">Read More</a>
 
-              <a href="#" class="thm-btn cta-three__btn-two">Contact Us</a>
+              <a href="#footer" class="thm-btn cta-three__btn-two">Contact Us</a>
             </div><!-- /.cta-three__btn-block -->
           </div>
         </div>

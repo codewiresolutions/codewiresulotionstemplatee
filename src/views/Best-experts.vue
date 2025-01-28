@@ -138,7 +138,7 @@ export default {
       {
         name: 'Shahbaz Ahmed ',
         designation: 'Business Analyest',
-        image: '/images/mbashar.jpg',
+        image: '/images/shahbaz.png',
         isHovered: false,
         socialLinks: [
           { name: 'facebook', url: 'https://www.facebook.com/' },
