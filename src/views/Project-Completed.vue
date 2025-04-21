@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import { ref, reactive } from 'vue';
+import { ref, reactive, onMounted, onUnmounted } from 'vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel';
@@ -109,7 +109,19 @@ export default {
       projects[index].isHovered = state;
     };
 
-    const itemsToShow = ref(3);
+    const itemsToShow = ref(window.innerWidth < 768 ? 1 : 3);
+
+    const updateItemsToShow = () => {
+      itemsToShow.value = window.innerWidth < 768 ? 1 : 3;
+    };
+
+    onMounted(() => {
+      window.addEventListener('resize', updateItemsToShow);
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener('resize', updateItemsToShow);
+    });
 
     return {
       projects,

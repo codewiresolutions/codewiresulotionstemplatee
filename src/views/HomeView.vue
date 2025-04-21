@@ -9,7 +9,6 @@ import OurCustomers from '@/views/Our-Customers.vue'
 import CounterBlue from '@/views/Counter-Blue.vue'
 import Contact from '@/views/contact.vue'
 import ItStaff from '@/views/It-Staff.vue'
-import FooterIntech from '@/views/Footer-Intech.vue'
 import SliderView from '@/views/SliderView.vue'
 
 </script>

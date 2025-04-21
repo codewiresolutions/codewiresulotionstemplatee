@@ -71,4 +71,30 @@
 </template>
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { ref } from 'vue'
+document.addEventListener('DOMContentLoaded', function () {
+  const offcanvasElement = document.getElementById('offcanvasNavbar');
+  const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
+
+  function closeMenu() {
+    offcanvas.hide();
+  }
+
+  document.querySelectorAll('.navbar-nav a').forEach(item => {
+    item.addEventListener('click', closeMenu);
+  });
+});
+
+const isOffcanvasOpen = ref(false);
+const toggleOffcanvas = () => {
+  isOffcanvasOpen.value = !isOffcanvasOpen.value;
+};
 </script>
+<style>
+.offcanvas {
+  transform: translateX(100%);
+}
+.offcanvas.show {
+  transform: translateX(0);
+}
+</style>

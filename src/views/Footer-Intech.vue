@@ -22,10 +22,10 @@
             <div class="menu-quick-link-container">
               <ul id="menu-quick-link" class="menu">
                 <li id="menu-item-721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-721">
-                  <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/">About Us</a>
+                  <RouterLink class="home-hd2" :to="{ path: '/', hash: '#it-solutions' }" @click="toggleOffcanvas">About us</RouterLink>
                 </li>
                 <li id="menu-item-723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723">
-                  <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/">Services</a>
+                  <RouterLink class="home-hd2" :to="{ path: '/', hash: '#it-services' }" @click="toggleOffcanvas">Services</RouterLink>
                 </li>
                 <li id="menu-item-972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-972">
                   <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/">Our Blog</a>
@@ -34,7 +34,10 @@
                   <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/">Pricing</a>
                 </li>
                 <li id="menu-item-724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-724">
-                  <a href="https://www.linkedin.com/in/javed-iqbal-5b7294243/">Contact Us</a>
+                  <RouterLink class="home-hd2" :to="{ path: '/', hash: '#bookappointment' }" @click="toggleOffcanvas">
+                    Contact Us
+                  </RouterLink>
+
                 </li>
               </ul>
             </div>
@@ -94,6 +97,7 @@
 <script setup lang="ts">
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { RouterLink } from 'vue-router'
 
 const socials = [
   { name: 'facebook', url: 'https://www.facebook.com/people/Code-Wire/pfbid0d7YVZxZdRJZMLhPWQemk7bsHvEYvtXLVW9qPbiwLrDDaHvUQQNd9xRBqzxcKwgZcl/', icon: 'facebook' },
