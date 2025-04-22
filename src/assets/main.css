@@ -238,23 +238,49 @@
     font-family: var(--heading-font);
   margin-top: 35px;
 }
-.btn-learn{
-    background-color: #20DFE3 ;
+.app-one__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Make the button take full width on small screens */
+.btn-learn {
+    background-color: #20DFE3;
     margin-top: 12px;
-    padding-bottom: 12px;
-    padding-top: 12px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 12px 32px;
     color: #FFFFFF;
     border: none;
     font-size: 17px;
     font-family: var(--heading-font);
     font-weight: 600;
+    position: relative;
 }
-.btn-learn:hover{
+
+.btn-learn:hover {
     background-color: #616161;
     color: #FFFFFF;
 }
+
+/* Responsive behavior for small screens */
+@media (max-width: 767px) {
+    .app-one__bottom {
+        flex-direction: column-reverse;
+        align-items: flex-start; /* Optional: aligns text/button to the left */
+        gap: 10px; /* Optional: space between button and text */
+    }
+
+    .btn-learn {
+        width: 100%;
+    }
+
+    .app-one-text {
+        width: 100%;
+    }
+}
+
 
 <!------------------------END STYLE Welcome Section--------------->
 

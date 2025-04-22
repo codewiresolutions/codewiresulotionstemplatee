@@ -8,7 +8,9 @@ import ProjectCompleted from '@/views/Project-Completed.vue'
 import OurCustomers from '@/views/Our-Customers.vue'
 import AllProjects from '@/views/AllProjects.vue'
 import PageView1 from '@/views/PageView1.vue'
-
+import ProjectDetails from '@/views/ProjectDetails.vue'
+import TermsOfServices from '@/views/TermsOfServices.vue'
+import PrivacyPolicy from '@/views/PrivacyPolicy.vue'
 const routes = [
   {
     path: '/',
@@ -36,6 +38,11 @@ const routes = [
     component: AllProjects
   },
   {
+    path: '/project/:id',
+    name: 'ProjectDetails',
+    component: ProjectDetails
+  },
+  {
     path: '/OurCustomers',
     name: 'OurCustomers',
     component: OurCustomers
@@ -54,6 +61,16 @@ const routes = [
     path: '/ItSolutions',
     name: 'ItSolutions',
     component: ItSolutions
+  },
+  {
+    path: '/terms-of-services',
+    name: 'TermsOfServices',
+    component: TermsOfServices
+  },
+  {
+    path: '/privacy-policy',
+    name: 'PrivacyPolicy',
+    component: PrivacyPolicy
   },
   {
     path: '/ItSuccess',

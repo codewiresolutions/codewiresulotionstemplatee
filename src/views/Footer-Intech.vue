@@ -35,7 +35,7 @@
                 </li>
                 <li id="menu-item-724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-724">
                   <RouterLink class="home-hd2" :to="{ path: '/', hash: '#bookappointment' }" @click="toggleOffcanvas">
-                    Contact Us
+                    Book Appointment
                   </RouterLink>
 
                 </li>
@@ -84,8 +84,17 @@
               <span>Codewire 2022 All Right Reserved</span>
             </div>
             <div class="col-md-6 col-sm-12 item-terms" style="display: flex;">
-              <span><a class="text-white" style="text-decoration: none">Terms of Service | </a></span>
-              <span><a class="text-white ps-1">Privacy Policy</a></span>
+              <span class="text-white">
+  <router-link to="/terms-of-services" class="text-white" style="text-decoration: none">
+    Terms of Service
+  </router-link>
+                |
+</span>
+              <span style="padding-left: 4px;">
+              <router-link to="/privacy-policy" class="text-white" style="text-decoration: none">
+                Privacy Policy
+              </router-link>
+                </span>
             </div>
           </div>
         </div>

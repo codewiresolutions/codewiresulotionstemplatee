@@ -27,7 +27,16 @@
     >
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
-        <button type="button" class="btn-close" @click="toggleOffcanvas" aria-label="Close"></button>
+        <!-- Replace your button like this -->
+        <button
+          type="button"
+          class="custom-close-btn"
+          @click="toggleOffcanvas"
+          aria-label="Close"
+        >
+          ✕
+        </button>
+
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 margin-nav">
@@ -97,4 +106,17 @@ const toggleOffcanvas = () => {
 .offcanvas.show {
   transform: translateX(0);
 }
+.custom-close-btn {
+  background-color: #20DFE3;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.custom-close-btn:hover {
+  background-color: #0D9488;
+}
+
 </style>

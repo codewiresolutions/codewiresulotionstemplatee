@@ -1,5 +1,5 @@
 <template>
-  <div id="project" style="background-image: url('/images/project-1-1-bg.jpg'); margin-top: 50px !important;">
+  <div id="project" style="background-image: url('/images/project-1-1-bg.jpg'); ">
     <div class="container-fluid">
       <div class="project-title text-center">
         <h2 class="project-title__title">Hundreds of projects completed <br>in 20 countries</h2>
@@ -72,7 +72,7 @@ export default {
 
     const projects = reactive([
       {
-        url: '#',
+        // url: '#',
         title: 'Virtual Integration',
         imageClass: 'image-container1',
         socials: socials.map(social => ({ ...social })),
@@ -80,7 +80,7 @@ export default {
         description: 'A cutting-edge solution for seamless virtual infrastructure integration, enhancing operational efficiency across global networks.'
       },
       {
-        url: '#',
+        // url: '#',
         title: 'Managed IT',
         imageClass: 'image-container22',
         socials: socials.map(social => ({ ...social })),
@@ -88,7 +88,7 @@ export default {
         description: 'Comprehensive IT management services that optimize performance and reduce downtime for businesses of all sizes.'
       },
       {
-        url: '#',
+        // url: '#',
         title: 'Multi Function',
         imageClass: 'image-container3',
         socials: socials.map(social => ({ ...social })),
@@ -96,7 +96,7 @@ export default {
         description: 'Versatile systems designed to handle multiple operational functions, streamlining processes and boosting productivity.'
       },
       {
-        url: '#',
+        // url: '#',
         title: 'Cyber Security',
         imageClass: 'image-container4',
         socials: socials.map(social => ({ ...social })),
