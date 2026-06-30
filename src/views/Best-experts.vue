@@ -1,13 +1,16 @@
 <template>
   <section id="best-expert">
     <div class="container">
-      <div class="row" style="padding-top: 128px;">
+      <div class="row" style="padding-top: 128px">
         <div class="col-lg-4 col-md-6 col-sm-12 hover-it">
           <div class="team-one__block">
             <div class="block-title">
-              <h2 class="block-title__title">Meet with our <br>best experts</h2>
+              <h2 class="block-title__title">Meet with our <br />best experts</h2>
               <p class="block-title__text">
-                Meet with our top experts who offer <br> personalized advice, cutting-edge <br> solutions, and unparalleled support <br> to drive your success.
+                Meet with our top experts who offer <br />
+                personalized advice, cutting-edge <br />
+                solutions, and unparalleled support <br />
+                to drive your success.
               </p>
               <a href="" class="thm-btn team-one__block-btn">Join Us</a>
             </div>
@@ -15,16 +18,35 @@
         </div>
 
         <!-- Expert Cards -->
-        <div v-for="(expert, index) in experts" :key="index" class="col-xl-4 col-lg-4 col-md-6 col-sm-12"
-             style="text-align: center; margin-bottom: 32px;">
-          <div class="team-one__single wow fadeInUp" :data-wow-duration="wowDuration" :data-wow-delay="wowDelay">
-            <div class="team-one__image hover-it"
-                 :style="{ backgroundImage: 'url(' + expert.image + ')', backgroundColor: expert.isHovered ? 'rgba(0, 123, 255, 0.5)' : 'transparent' }"
-                 @mouseover="handleHover(true, expert.name)"
-                 @mouseleave="handleHover(false, expert.name)">
+        <div
+          v-for="(expert, index) in experts"
+          :key="index"
+          class="col-xl-4 col-lg-4 col-md-6 col-sm-12"
+          style="text-align: center; margin-bottom: 32px"
+        >
+          <div
+            class="team-one__single wow fadeInUp"
+            :data-wow-duration="wowDuration"
+            :data-wow-delay="wowDelay"
+          >
+            <div
+              class="team-one__image hover-it"
+              :style="{
+                backgroundImage: 'url(' + expert.image + ')',
+                backgroundColor: expert.isHovered ? 'rgba(0, 123, 255, 0.5)' : 'transparent'
+              }"
+              @mouseover="handleHover(true, expert.name)"
+              @mouseleave="handleHover(false, expert.name)"
+            >
               <div class="overlay"></div>
               <div class="team-one__social" v-if="expert.isHovered">
-                <a v-for="(icon, idx) in expert.socialLinks" :key="idx" :href="icon.url" class="icon-style" target="_blank">
+                <a
+                  v-for="(icon, idx) in expert.socialLinks"
+                  :key="idx"
+                  :href="icon.url"
+                  class="icon-style"
+                  target="_blank"
+                >
                   <font-awesome-icon :icon="['fab', icon.name]" />
                 </a>
               </div>
@@ -124,9 +146,9 @@ export default {
         ]
       },
       {
-        name: 'Hafiz M Tariq',
+        name: 'Sahil Meo',
         designation: 'Junior Front End Developer',
-        image: '/images/mbashar.jpg',
+        image: '/images/SahilMeo.jpg',
         isHovered: false,
         socialLinks: [
           { name: 'facebook', url: 'https://www.facebook.com/' },
@@ -147,14 +169,13 @@ export default {
           { name: 'vimeo-v', url: 'https://vimeo.com/' }
         ]
       }
-
-    ]);
+    ])
 
     // Methods
     const handleHover = (shouldHighlight, nameData) => {
-      const expert = experts.value.find(expert => expert.name === nameData);
+      const expert = experts.value.find((expert) => expert.name === nameData)
       if (expert) {
-        expert.isHovered = shouldHighlight;
+        expert.isHovered = shouldHighlight
       }
     }
 
@@ -231,7 +252,7 @@ export default {
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
   background-color: blue;
 }
 
