@@ -112,9 +112,9 @@ export default {
         ]
       },
       {
-        name: 'Asif Javed ',
-        designation: 'Senior QA Engineer',
-        image: '/images/mbashar.jpg',
+        name: 'Muhammad Muzammil ',
+        designation: 'Full-stack Developer',
+        image: '/images/muzammal.jpeg',
         isHovered: false,
         socialLinks: [
           { name: 'facebook', url: 'https://www.facebook.com/' },

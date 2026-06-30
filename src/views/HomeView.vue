@@ -461,7 +461,7 @@ export default {
         // Reset errors before submitting
         this.errors = {};
 
-        const response = await axios.post('https://backendcodewiresolutions.codewiresolutions.com/api/contacts', this.contact);
+        const response = await axios.post('https://api.codewiresolutions.com/api/contacts', this.contact);
         Swal.fire({
           title: "Success!",
           text: "Your contact has been submitted successfully.",
