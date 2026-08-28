@@ -74,7 +74,7 @@
               City vehari
             </p>
             <!-- /.footer-widget__text -->
-            <p class="footer-widget__text">+92 3087933900</p><!-- /.footer-widget__text -->
+<!--            <p class="footer-widget__text">+92 3087933900</p>&lt;!&ndash; /.footer-widget__text &ndash;&gt;-->
             <p class="footer-widget__text">info@codewiresolutions.com</p><!-- /.footer-widget__text --><!-- /.footer-widget -->
 
           </div></div>
