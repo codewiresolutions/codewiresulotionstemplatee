@@ -1,697 +1,799 @@
-<script setup>
+﻿<template>
+  <div class="home">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="container hero__layout">
 
-import { RouterView } from 'vue-router'
-import ItSolutions from '@/views/It-Solutions.vue'
-import AboutView from '@/views/AboutView.vue'
-import ItSuccess from '@/views/ItSuccess.vue'
-import BestExperts from '@/views/Best-experts.vue'
-import ProjectCompleted from '@/views/Project-Completed.vue'
-import OurCustomers from '@/views/Our-Customers.vue'
-import CounterBlue from '@/views/Counter-Blue.vue'
-import Contact from '@/views/contact.vue'
-import ItStaff from '@/views/It-Staff.vue'
-import FooterIntech from '@/views/Footer-Intech.vue'
-import SliderView from '@/views/SliderView.vue'
-
-
-
-
-
-</script>
-
-<template>
-  <div class="p-0 m-0">
-    <header class="site-header  ">
-      <nav class="navbar fixed-top navbar-expand-lg header-navigation nav-stk">
-        <div class="container-fluid container-main">
-          <div class="logo-box">
-            <a href="#">
-              <img src="/images/logo.png" style="height: 44px; object-fit: cover" />
-            </a>
+        <!-- â”€â”€ LEFT: Text content â”€â”€ -->
+        <div class="hero__content">
+          <h1 class="display hero__title reveal" v-reveal="80">
+Smart Software Real Growth
+          </h1>
+          <p class="lead hero__lead reveal" v-reveal="160">
+            CodeWire Solutions designs, builds and scales web, mobile and AI products â€”
+            from first prototype to production. A senior team, fixed timelines and honest
+            communication, start to finish.
+          </p>
+          <div class="btn-group hero__cta reveal" v-reveal="240">
+            <RouterLink to="/contact#start" class="btn btn--primary btn--lg">
+              Start a Project <AppIcon name="arrow-right" class="icon-arrow" />
+            </RouterLink>
+            <RouterLink to="/work" class="btn btn--ghost btn--lg">View Our Work</RouterLink>
           </div>
-          <button
-            class="navbar-toggler"
-            type="button"
-            @click="toggleOffcanvas"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
-            :style="{ backgroundColor: '#21D6DA', color: '#FFFFFF', position:'relative' }"
+          <ul class="hero__points reveal" v-reveal="320">
+            <li v-for="p in heroPoints" :key="p"><AppIcon name="check" :size="16" /> {{ p }}</li>
+          </ul>
+        </div>
+
+        <!-- â”€â”€ RIGHT: Abstract geometric visual â”€â”€ -->
+        <div class="hero__visual reveal" v-reveal="180" aria-hidden="true">
+
+          <!-- Large outlined numeral â€” confidence anchor -->
+          <span class="hv-numeral">50<sup>+</sup></span>
+
+          <!-- SVG geometry layer -->
+          <svg class="hv-svg" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer thin ring -->
+            <circle cx="240" cy="240" r="220" stroke="currentColor" stroke-width="0.75" stroke-dasharray="6 10" opacity="0.18"/>
+            <!-- Middle ring -->
+            <circle cx="240" cy="240" r="160" stroke="currentColor" stroke-width="1" opacity="0.12"/>
+            <!-- Inner ring with gap -->
+            <circle cx="240" cy="240" r="100" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.2"/>
+            <!-- Yellow arc â€” 270Â° sweep -->
+            <path
+              d="M240 80 A160 160 0 1 1 80.5 285"
+              stroke="#ffc400" stroke-width="2" stroke-linecap="round" opacity="0.7"
+            />
+            <!-- Cross-hair lines -->
+            <line x1="20"  y1="240" x2="460" y2="240" stroke="currentColor" stroke-width="0.6" opacity="0.1"/>
+            <line x1="240" y1="20"  x2="240" y2="460" stroke="currentColor" stroke-width="0.6" opacity="0.1"/>
+            <!-- Corner tick marks -->
+            <line x1="60"  y1="60"  x2="90"  y2="60"  stroke="currentColor" stroke-width="1.2" opacity="0.22"/>
+            <line x1="60"  y1="60"  x2="60"  y2="90"  stroke="currentColor" stroke-width="1.2" opacity="0.22"/>
+            <line x1="420" y1="60"  x2="390" y2="60"  stroke="currentColor" stroke-width="1.2" opacity="0.22"/>
+            <line x1="420" y1="60"  x2="420" y2="90"  stroke="currentColor" stroke-width="1.2" opacity="0.22"/>
+            <line x1="60"  y1="420" x2="90"  y2="420" stroke="currentColor" stroke-width="1.2" opacity="0.22"/>
+            <line x1="60"  y1="420" x2="60"  y2="390" stroke="currentColor" stroke-width="1.2" opacity="0.22"/>
+            <line x1="420" y1="420" x2="390" y2="420" stroke="currentColor" stroke-width="1.2" opacity="0.22"/>
+            <line x1="420" y1="420" x2="420" y2="390" stroke="currentColor" stroke-width="1.2" opacity="0.22"/>
+            <!-- Yellow accent dot -->
+            <circle cx="240" cy="80"  r="5" fill="#ffc400"/>
+            <!-- Small pulse ring on accent dot -->
+            <circle cx="240" cy="80"  r="11" stroke="#ffc400" stroke-width="1" opacity="0.35"/>
+          </svg>
+
+          <!-- Stat chips â€” positioned at compass points -->
+          <div class="hv-chip hv-chip--top">
+            <strong>50+</strong>
+            <span>Projects delivered</span>
+          </div>
+          <div class="hv-chip hv-chip--right">
+            <strong>98%</strong>
+            <span>On-time rate</span>
+          </div>
+          <div class="hv-chip hv-chip--bottom">
+            <strong>5.0</strong>
+            <span>Avg. client rating</span>
+          </div>
+          <div class="hv-chip hv-chip--left">
+            <strong>6+</strong>
+            <span>Years in market</span>
+          </div>
+
+        </div>
+        <!-- /hero__visual -->
+
+      </div>
+
+      <!-- Technologies strip -->
+      <div class="container hero__tech reveal" v-reveal="120">
+        <span class="hero__tech-label">Technologies we build with</span>
+        <ul class="hero__tech-row">
+          <li v-for="t in heroTech" :key="t">{{ t }}</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== STATS / SOCIAL PROOF ===================== -->
+    <section class="section section--tight surface-elev stats-band">
+      <div class="container">
+        <p class="eyebrow eyebrow--center" v-reveal>By the numbers</p>
+        <div class="grid grid-4 stats-band__grid">
+          <StatItem
+            v-for="(s, i) in stats"
+            :key="s.label"
+            v-reveal="i * 70"
+            :value="s.value"
+            :suffix="s.suffix"
+            :label="s.label"
+            
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="between services__head">
+          <SectionHeading
+            eyebrow="What we do"
+            title="End-to-end product engineering"
           >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-end bg-dark"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-            :class="{ show: isOffcanvasOpen }"
-            style="transition: transform 0.3s ease-in-out"
+            From first prototype to production scale â€” one senior team across the whole stack.
+          </SectionHeading>
+          <RouterLink to="/services" class="btn btn--ghost services__head-cta">
+            All Services <AppIcon name="arrow-right" class="icon-arrow" />
+          </RouterLink>
+        </div>
+        <div class="grid grid-3">
+          <ServiceCard
+            v-for="(s, i) in servicesPreview"
+            :key="s.slug"
+            v-reveal="i * 60"
+            :service="s"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURED WORK ===================== -->
+    <section class="section surface-elev">
+      <div class="container">
+        <SectionHeading
+          center
+          eyebrow="Selected work"
+          title="Products weâ€™ve helped bring to life"
+        >
+          A snapshot of the kinds of products we build. These case studies are sample
+          placeholders, clearly flagged, until real projects are published.
+        </SectionHeading>
+        <div class="grid grid-3">
+          <ProjectCard
+            v-for="(p, i) in featuredProjects"
+            :key="p.slug"
+            v-reveal="i * 70"
+            :project="p"
+          />
+        </div>
+        <div class="section-cta" v-reveal>
+          <RouterLink to="/work" class="btn btn--ghost">
+            Explore all case studies <AppIcon name="arrow-right" class="icon-arrow" />
+          </RouterLink>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY CODEWIRE ===================== -->
+    <section class="section">
+      <div class="container">
+        <SectionHeading
+          eyebrow="Why CodeWire"
+          title="A partner you can actually build with"
+        >
+          We combine senior engineering with honest communication â€” so you get software
+          that works, on a timeline you can trust.
+        </SectionHeading>
+        <div class="grid grid-3">
+          <article
+            v-for="(d, i) in differentiators"
+            :key="d.title"
+            class="card why-card"
+            v-reveal="i * 60"
           >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
-              <button type="button" class="btn-close" @click="toggleOffcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 margin-nav">
-                <li class="menu-item-12">
-                  <a class=" home-hd1" href="#" @click="toggleOffcanvas">Home</a>
-                </li>
-                <li class="menu-item-12">
-                  <a class=" home-hd2" href="#it-solutions" @click="toggleOffcanvas">About</a>
-                </li>
-                <li class="menu-item-12">
-                  <a class=" home-hd2" href="#it-services" @click="toggleOffcanvas">Services</a>
-                </li>
-                <li class="menu-item-12">
-                  <a class=" home-hd2" href="#best-expert" @click="toggleOffcanvas">Team</a>
-                </li>
-                <li class="menu-item-12">
-                  <a class=" home-hd2 " href="#project" @click="toggleOffcanvas">News</a>
-                </li>
-                <li class="menu-item-12">
-                  <a class=" home-hd2 " href="#bookappointment" @click="toggleOffcanvas">Book Appointment</a>
-                </li>
-                <li class="menu-item-12">
-                  <a class=" home-hd2" href="#footer" @click="toggleOffcanvas">Contact</a>
-                </li>
-              </ul>
-            </div>
+            <span class="icon-tile"><AppIcon :name="d.icon" /></span>
+            <h3 class="why-card__title">{{ d.title }}</h3>
+            <p class="why-card__text">{{ d.text }}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section class="section surface-elev process">
+      <div class="container">
+        <SectionHeading
+          center
+          eyebrow="How we work"
+          title="A proven six-step process"
+        >
+          Transparent, collaborative and built around your goals â€” from first call to long-term support.
+        </SectionHeading>
+        <div class="grid grid-3 process__grid">
+          <article
+            v-for="(step, i) in processSteps"
+            :key="step.no"
+            class="process-step"
+            v-reveal="i * 60"
+          >
+<span class="big-number process-step__no" style="color: #ffc400;">
+    {{ step.no }}
+</span>            <h3 class="process-step__title">{{ step.title }}</h3>
+            <p class="process-step__text">{{ step.text }}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TECH STACK ===================== -->
+  
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="section surface-elev testi-section">
+      <div class="container">
+        <div class="testi-head" v-reveal>
+          <SectionHeading
+            eyebrow="What clients say"
+            title="Trusted by the teams we work with"
+          >
+            Sample placeholders — replace with verified client reviews before launch.
+          </SectionHeading>
+          <div class="testi-nav">
+            <button class="testi-nav__btn" id="testi-prev" aria-label="Previous review">
+              <AppIcon name="arrow-left" :size="18" />
+            </button>
+            <button class="testi-nav__btn" id="testi-next" aria-label="Next review">
+              <AppIcon name="arrow-right" :size="18" />
+            </button>
           </div>
         </div>
-      </nav>
 
+        <Swiper
+          class="testi-swiper"
+          :modules="swiperModules"
+          :slides-per-view="1"
+          :space-between="28"
+          :loop="true"
+          :pagination="{ clickable: true, el: '.testi-pagination' }"
+          :navigation="{ prevEl: '#testi-prev', nextEl: '#testi-next' }"
+          :breakpoints="{
+            640:  { slidesPerView: 1 },
+            768:  { slidesPerView: 2 },
+            1100: { slidesPerView: 3 },
+          }"
+        >
+          <SwiperSlide v-for="(t, i) in clientTestimonials" :key="i">
+            <TestimonialCard :item="t" />
+          </SwiperSlide>
+        </Swiper>
 
-    </header>
-<div class="container-fluid  p-0 m-0">
-  <slider-view></slider-view>
-</div>
-    <!----------------------------Welcome Section--------------->
+        <div class="testi-pagination"></div>
+      </div>
+    </section>
 
+    
 
-
-
-
-    <!----------------------------End Welcome Section-------------->
-
-
-
-    <!----------------------------BOOK Appointment--------->
-     <section id="bookappointment">
-        <div class="container-back" style="background-color: #F0F1F5 !important;">
-      <div class="container-book">
-
-
-        <div class="inner-cont">
-          <h3 class="app-one-title">Book Appointment with Codewire Solutions</h3>
-          <p class="app-one-text">Book an appointment for IT services to ensure the security and efficiency of your systems.</p>
-          <div class="app-one__form">
-            <div class=" card-row">
-              <div class="row">
-                <div class="col-lg-4 col-md-12">
-        <span class="wpcf7-form-control-wrap your-name-wrap">
-          <input
-            class="form-input text-white"
-            placeholder="Your name"
-            v-model="contact.name"
-          />
-        </span>
-                  <!-- Display validation error for name -->
-                  <p v-if="errors.name" class="text-danger">{{ errors.name[0] }}</p>
-                </div>
-                <div class="col-lg-4 col-md-12">
-        <span class="wpcf7-form-control-wrap your-name-wrap">
-          <input
-            class="form-input text-white"
-            placeholder="Your email"
-            v-model="contact.email"
-          />
-        </span>
-                  <!-- Display validation error for email -->
-                  <p v-if="errors.email" class="text-danger">{{ errors.email[0] }}</p>
-                </div>
-                <div class="col-lg-4 col-md-12">
-        <span class="wpcf7-form-control-wrap your-name-wrap">
-          <input
-            class="form-input text-white"
-            placeholder="Phone Number"
-            v-model="contact.phone_number"
-          />
-        </span>
-                  <!-- Display validation error for phone_number -->
-                  <p v-if="errors.phone_number" class="text-danger">{{ errors.phone_number[0] }}</p>
-                </div>
-                <div class="col-lg-8 col-md-12">
-        <span class="wpcf7-form-control-wrap your-name-wrap">
-          <textarea
-            class="form-input-query"
-            placeholder="Description"
-            v-model="contact.description"
-          ></textarea>
-        </span>
-                  <!-- Display validation error for description -->
-                  <p v-if="errors.description" class="text-danger">{{ errors.description[0] }}</p>
-                </div>
-                <div class="col-lg-12">
-                  <div class="app-one__bottom">
-                    <p class="app-one-text">
-                      Schedule an appointment with <strong>Codewire Solutions</strong> today for
-                      <strong>IT services</strong> to enhance the security and efficiency of your systems,
-                      <br />
-                      and receive customized support designed specifically for your needs.
-                    </p>
-                    <button
-                      class="btn-learn"
-                      style="position: relative;"
-                      @click="submitContactForm"
-                    >
-                      Get Appointment
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
+    <!-- ===================== LATEST INSIGHTS ===================== -->
+    <section class="section surface-elev">
+      <div class="container">
+        <div class="between services__head">
+          <SectionHeading eyebrow="Insights" title="From the CodeWire blog">
+            Practical thinking on building, shipping and scaling software.
+          </SectionHeading>
+          <RouterLink to="/blog" class="btn btn--ghost services__head-cta">
+            All Articles <AppIcon name="arrow-right" class="icon-arrow" />
+          </RouterLink>
         </div>
-        <hr class="bookhr-line">
-        <!-----------------------------------end Book Appoinment---------->
+        <div class="grid grid-3">
+          <PostCard v-for="(post, i) in recentPosts" :key="post.slug" v-reveal="i * 70" :post="post" />
+        </div>
+      </div>
+    </section>
 
-
-            <!------------------------------IT-Services------------>
-
-          <section id="it-services">
-           <div class="row " style="        display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;">
-              <div class="block-title text-center">
-            <h2 class="block-service" style="padding-bottom: 55px;">
-              World best IT-Services
-              <br>
-              we provide
-              <span class="border-span"></span>
-            </h2>
-          </div>
-               <div class="row">
-                 <div class="col-lg-4  col-sm-12 ">
-
-                 <div class="hvr-bounce-to-bottom design-up best-it icon-book "
-                   :class="{ 'hover-color1': isHovered1 }" @mouseover="changeColor1" @mouseout="defaultcolor1">
-                   <i :class="textClass" style="color: #5538F4 ;">
-                  <font-awesome-icon icon="users-gear" />
-                  </i>
-                 <h3 class="service-one " style="color: black" :class="textClass">
-                  Web Application Development
-                  </h3>
-                   <p :class="textClass" style="font-size: 14px; color: #888888">Web application development involves creating dynamic,
-                  interactive online applications tailored to user needs.</p>
-              </div>
-            </div>
-
-            <div class="col-lg-4  col-sm-12 ">
-
-              <div class="hvr-bounce-to-bottom design-up best-it icon-book "
-                   :class="{ 'hover-color2': isHovered2 }" @mouseover="changeColor2" @mouseout="defaultcolor2">
-                <i :class=" textcClass" style="color: #5538F4 ;">
-                  <font-awesome-icon icon="mobile-screen-button" />
-                </i>
-                <h3 class="service-one " style="color: black" :class=" textcClass">
-                  Mobile Application Development
-                </h3>
-                <p :class=" textcClass" style="font-size: 14px; color: #888888">Mobile app development involves designing and
-                  building custom apps for iOS and Android platforms.</p>
-              </div>
-            </div>
-            <div class="col-lg-4  col-sm-12 " >
-
-              <div class="hvr-bounce-to-bottom design-up best-it icon-book "
-                   :class="{ 'hover-color3': isHovered3 }" @mouseover="changeColor3" @mouseout="defaultcolor3">
-
-
-                <i :class="textPClass" style="color: #5538F4 ;">
-                  <font-awesome-icon icon="gears" />
-                </i>
-
-                <h3 class="service-one " style="color: black" :class="textPClass">
-                  DevOps Solutions & Services
-                </h3>
-                <p :class="textPClass" style="font-size: 14px; color: #888888">DevOps solutions and services streamline development
-                  deployment and operations for faster
-                  more efficient software delivery.</p>
-
-
-              </div>
-            </div>
-          </div>
-               <div class="row">
-            <div class="col-lg-4  col-sm-12 ">
-
-              <div class="hvr-bounce-to-bottom design best-it icon-book "
-                   :class="{ 'hover-color1': isHovered4 }" @mouseover="changeColor4" @mouseout="defaultcolor4">
-                <i :class="textClass4" style="color: #5538F4 ;">
-                  <font-awesome-icon icon="building-wheat" />
-                </i>
-                <h3 class="service-one " style="color: black" :class="textClass4">
-                  UI/UX Design
-                </h3>
-                <p :class="textClass4" style="font-size: 14px; color: #888888">UI/UX design focuses on creating intuitive,
-                  engaging interfaces for optimal user experiences.</p>
-              </div>
-            </div>
-
-            <div class="col-lg-4  col-sm-12 ">
-
-              <div class="hvr-bounce-to-bottom design best-it icon-book "
-                   :class="{ 'hover-color2': isHovered5 }" @mouseover="changeColor5" @mouseout="defaultcolor5">
-                <i :class=" textcClass5" style="color: #5538F4 ;">
-                  <font-awesome-icon icon="globe" />
-                </i>
-                <h3 class="service-one " style="color: black" :class=" textcClass5">
-                  Digital Transformation
-                </h3>
-                <p :class=" textcClass5" style="font-size: 14px; color: #888888">Digital transformation uses technology to modernize processes,
-                  boosting efficiency, agility, and customer experience.</p>
-              </div>
-            </div>
-            <div class="col-lg-4  col-sm-12 " >
-
-              <div class="hvr-bounce-to-bottom design best-it icon-book "
-                   :class="{ 'hover-color3': isHovered6 }" @mouseover="changeColor6" @mouseout="defaultcolor6">
-
-
-                <i :class="textPClass6" style="color: #5538F4 ;">
-                  <!--                 // <font-awesome-icon icon="gears" />-->
-                  <font-awesome-icon icon="circle-check" />
-                </i>
-
-                <h3 class="service-one " style="color: black" :class="textPClass6">
-                  Quality Assurance & Testing
-                </h3>
-                <p :class="textPClass6" style="font-size: 14px; color: #888888">Quality assurance and testing ensure products meet standards,
-                  providing reliability and performance.</p>
-
-
-              </div>
-            </div>
-          </div>
-
-            </div>
-          </section>
-       </div>
-
-
-    </div>
-
-     </section>
-  <!---->
-
-    <!---------------------END ItSevicesView--------------->
-
-    <!-----------END IT-Services---->
-
-
-<it-solutions></it-solutions>
-
-<about-view></about-view>
-<ItSuccess></ItSuccess>
-<best-experts></best-experts>
-<project-completed></project-completed>
-<our-customers></our-customers>
-<counter-blue></counter-blue>
-<contact></contact>
-<ItStaff></ItStaff>
-<FooterIntech></FooterIntech>
-
-
-    </div>
-
-
-  <!---------------------------vue3-carousel------------------------->
-
+    <!-- ===================== FINAL CTA ===================== -->
+    <CtaBand />
+  </div>
 </template>
 
+<script setup>
+import AppIcon from '@/components/ui/AppIcon.vue'
+import SectionHeading from '@/components/ui/SectionHeading.vue'
+import StatItem from '@/components/ui/StatItem.vue'
+import ServiceCard from '@/components/ui/ServiceCard.vue'
+import ProjectCard from '@/components/ui/ProjectCard.vue'
+import TestimonialCard from '@/components/ui/TestimonialCard.vue'
+import PostCard from '@/components/ui/PostCard.vue'
+import CtaBand from '@/components/ui/CtaBand.vue'
+
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
+
+import { homeServices } from '@/data/services'
+import { differentiators, processSteps } from '@/data/process'
+import { techCategories } from '@/data/techStack'
+import { stats } from '@/data/stats'
+import { clientTestimonials } from '@/data/testimonials'
+import { featuredProjects } from '@/data/projects'
+import { recentPosts } from '@/data/posts'
+import { courses } from '@/data/courses'
+
+const swiperModules = [Navigation, Pagination]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Slide } from 'vue3-carousel';
-import { ref } from 'vue';
-import axios from 'axios';
-
-export default {
-  components: {
-    Carousel,
-    Slide,
-  },
-  data() {
-    return {
-      text: "We Provide IT-Services",
-      isHovered1: false,
-      isHovered2: false,
-      isHovered3: false,
-      isHovered4: false,
-      isHovered5: false,
-      isHovered6: false,
-      isMenuActive: false,
-      activeTab: 0, // Index of the active tab, starting with 0
-      tabs: [
-        {
-          title: 'Our Mission1',
-          content: 'Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ulac laboris aliquip ex ea commodo consequat duis aute irure.',
-          items: ['consectetur elit sed do eius', 'consectetur elit sed', 'consectetur elit sed do'],
-          link: 'http://el.commonsupport.com/newwp/intech/about-one/'
-        },
-        {
-          title: 'Our Vision2',
-          content: 'Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ulac laboris aliquip ex ea commodo consequat duis aute irure.',
-          items: ['consectetur elit sed do eius', 'consectetur elit sed', 'consectetur elit sed do'],
-          link: 'http://el.commonsupport.com/newwp/intech/about-one/'
-        },
-        {
-          title: 'Awards Win3',
-          content: 'Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ulac laboris aliquip ex ea commodo consequat duis aute irure.',
-          items: ['consectetur elit sed do eius', 'consectetur elit sed', 'consectetur elit sed do'],
-          link: 'http://el.commonsupport.com/newwp/intech/about-one/'
-        }
-      ],
-      contact: {
-        name: '',
-        email: '',
-        phone_number: '',
-        description: '',
-      },
-      errors: {}  // Store validation errors here
-    };
-  },
-  computed: {
-    textClass() {
-      return this.isHovered1 ? 'hover-color1' : 'default-color1';
-    },
-    textcClass() {
-      return this.isHovered2 ? 'hover-color2' : 'default-color2';
-    },
-    textPClass() {
-      return this.isHovered3 ? 'hover-color3' : 'default-color3';
-    },
-    textClass4() {
-      return this.isHovered4 ? 'hover-color4' : 'default-color4';
-    },
-    textcClass5() {
-      return this.isHovered5 ? 'hover-color5' : 'default-color5';
-    },
-    textPClass6() {
-      return this.isHovered6 ? 'hover-color6' : 'default-color6';
-    }
-  },
-  methods: {
-    changeColor1() {
-      this.isHovered1 = true;
-    },
-    defaultcolor1() {
-      this.isHovered1 = false;
-    },
-    changeColor2() {
-      this.isHovered2 = true;
-    },
-    defaultcolor2() {
-      this.isHovered2 = false;
-    },
-    changeColor3() {
-      this.isHovered3 = true;
-    },
-    defaultcolor3() {
-      this.isHovered3 = false;
-    },
-    changeColor4() {
-      this.isHovered4 = true;
-    },
-    defaultcolor4() {
-      this.isHovered4 = false;
-    },
-    changeColor5() {
-      this.isHovered5 = true;
-    },
-    defaultcolor5() {
-      this.isHovered5 = false;
-    },
-    changeColor6() {
-      this.isHovered6 = true;
-    },
-    defaultcolor6() {
-      this.isHovered6 = false;
-    },
-    // Contact form submission
-    async submitContactForm() {
-      try {
-        // Reset errors before submitting
-        this.errors = {};
-
-        const response = await axios.post('https://api.codewiresolutions.com/api/contacts', this.contact);
-        Swal.fire({
-          title: "Success!",
-          text: "Your contact has been submitted successfully.",
-          icon: "success",
-          confirmButtonText: "OK",
-        });
-        console.log('Contact created successfully:', response.data);
-        // Optionally reset form fields here or show a success message
-        this.contact.name = '';
-        this.contact.email = '';
-        this.contact.phone_number = '';
-        this.contact.description = '';
-      } catch (error) {
-        console.error('Error submitting form:', error);
-        if (error.response && error.response.data.errors) {
-          // Capture validation errors from the backend
-          this.errors = error.response.data.errors;
-        }
-      }
-    }
-  }
-};
-
-// Initialize Bootstrap's Offcanvas and close menu on item click
-document.addEventListener('DOMContentLoaded', function () {
-  const offcanvasElement = document.getElementById('offcanvasNavbar');
-  const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
-
-  function closeMenu() {
-    offcanvas.hide();
-  }
-
-  document.querySelectorAll('.navbar-nav a').forEach(item => {
-    item.addEventListener('click', closeMenu);
-  });
-});
-
-const isOffcanvasOpen = ref(false);
-const toggleOffcanvas = () => {
-  isOffcanvasOpen.value = !isOffcanvasOpen.value;
-};
+const heroTech = ['Vue', 'React', 'Next.js', 'Node.js', 'Laravel', 'Python', 'AWS', 'React Native']
+const servicesPreview = homeServices.slice(0, 6)
+const courseTitles = courses.map((c) => c.title)
 </script>
 
-
-
 <style scoped>
+/* ================================================================
+   HERO â€” Two-column layout
+   Left: text content  |  Right: animated dashboard visual
+   Background untouched (inherits from page)
+   ================================================================ */
 
-
-.offcanvas {
-  transform: translateX(100%);
-}
-.offcanvas.show {
-  transform: translateX(0);
-}
-/* Base styles */
-body {
-  background: #333;
-  text-align: center;
-  padding: 100px;
-}
-
-/* Link styles */
-.hvr-bounce-to-top {
-  font-family: Avenir;
-  text-transform: uppercase;
-  color: transparent;
-  opacity: 1;
-
-  background-image: url("http://el.commonsupport.com/newwp/intech/wp-content/uploads/2021/03/project-1-1.jpg");
-  text-decoration: none;
-  padding: 150px 70px;
-  display: inline-block;
+.hero {
   position: relative;
-  overflow: hidden; /* Ensures the hover effect is contained */
+  padding-top: calc(var(--header-h) + clamp(3rem, 8vw, 6.5rem));
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  overflow: hidden;
 }
 
-.hvr-bounce-to-top:before {
-  content: "";
+/* ---------- Two-column grid ---------- */
+.hero__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 6rem);
+}
+
+/* ---------- Left: text content ---------- */
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+.hero__title {
+  margin: var(--space-5) 0;
+  max-width: 18ch;
+}
+.hero__lead {
+  max-width: 52ch;
+  margin-bottom: var(--space-6);
+}
+.hero__cta {
+  justify-content: flex-start;
+}
+.hero__points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+.hero__points li {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--fs-sm);
+  color: var(--text-body);
+}
+.hero__points :deep(.icon) {
+  color: var(--yellow);
+  flex-shrink: 0;
+}
+
+/* ---------- Right: geometric visual ---------- */
+.hero__visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 460px;
+  color: var(--text-hi);
+  overflow: hidden; /* prevent chips from creating horizontal scroll / red lines */
+}
+
+/* Large ghost numeral â€” background anchor */
+.hv-numeral {
   position: absolute;
-  background: rgba(0, 0, 0, 0.75);
-  color: #FFFFFF;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 100%; /* Initially hidden below the link */
-  transition: top 0.3s ease; /* Smooth transition */
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: clamp(9rem, 18vw, 14rem);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(11, 11, 11, 0.07);
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+}
+.hv-numeral sup {
+  font-size: 0.38em;
+  vertical-align: super;
+  -webkit-text-stroke: 1px rgba(11, 11, 11, 0.07);
 }
 
-/* Hover styles */
-.hvr-bounce-to-top:hover:before {
-  top: 0; /* Moves the background from bottom to top */
+/* SVG rings + geometry */
+.hv-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--text-hi);
+  pointer-events: none;
+  animation: hv-slow-spin 60s linear infinite;
 }
-.hvr-bounce-to-top:hover, .hvr-bounce-to-top:focus, .hvr-bounce-to-top:active {
-  color: black;
-  background-color: #20DFE3 !important;
-
-
-
-
-
-}
-
-.default-color {
-  color: red;
-
-
+@keyframes hv-slow-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
-.hover-color1 {
-  color: white !important;
-
-
+/* Stat chips â€” positioned at 4 compass points */
+.hv-chip {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 18px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  min-width: 110px;
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  animation: hv-chip-in 0.6s var(--ease) both;
 }
-.hover-color2 {
-  color: white !important;
-
-
+.hv-chip:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--yellow);
 }
-.hover-color3 {
-  color: white !important;
-
-
+.hv-chip strong {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-hi);
+  line-height: 1;
 }
-.hover-color4 {
-  color: white !important;
-
-
+.hv-chip span {
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
-.hover-color5 {
-  color: white !important;
-
-
+/* Yellow accent line on top */
+.hv-chip::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: var(--yellow);
+  border-radius: 0 0 2px 2px;
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
 }
-.hover-color6 {
-  color: white !important;
+.hv-chip:hover::before { opacity: 1; }
 
+/* Positioning */
+.hv-chip--top    { top: 4%;  left: 50%; transform: translateX(-50%); animation-delay: 0.1s; }
+.hv-chip--right  { top: 50%; right: 4%; transform: translateY(-50%); animation-delay: 0.2s; }
+.hv-chip--bottom { bottom: 4%; left: 50%; transform: translateX(-50%); animation-delay: 0.3s; }
+.hv-chip--left   { top: 50%; left: 4%; transform: translateY(-50%); animation-delay: 0.4s; }
 
+/* Hover overrides so transform keeps position */
+.hv-chip--top:hover    { transform: translateX(-50%) translateY(-4px); }
+.hv-chip--right:hover  { transform: translateY(-50%) translateX(-4px); }
+.hv-chip--bottom:hover { transform: translateX(-50%) translateY(4px); }
+.hv-chip--left:hover   { transform: translateY(-50%) translateX(4px); }
+
+@keyframes hv-chip-in {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; }
 }
-.default-color1 {
-  color: red;
+/* fix: chip-in keyframe must not fight position transforms */
+.hv-chip--top    { animation-name: hv-chip-in-top; }
+.hv-chip--right  { animation-name: hv-chip-in-right; }
+.hv-chip--bottom { animation-name: hv-chip-in-bottom; }
+.hv-chip--left   { animation-name: hv-chip-in-left; }
 
-
+@keyframes hv-chip-in-top {
+  from { opacity: 0; transform: translateX(-50%) translateY(12px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
-.default-color12{
-  color: red;
-
-
+@keyframes hv-chip-in-right {
+  from { opacity: 0; transform: translateY(-50%) translateX(-12px); }
+  to   { opacity: 1; transform: translateY(-50%) translateX(0); }
 }
-/* Container styles */
-
-
-/* Styles for the dot/circle */
-
-.container {
-  padding: 20px;
+@keyframes hv-chip-in-bottom {
+  from { opacity: 0; transform: translateX(-50%) translateY(-12px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
-
-/* Styles for the text element */
-.provide-wel {
-  opacity: 0; /* Start with text hidden */
-  transform: translateY(-210px); /* Start with text slightly moved up */
-  animation: fadeInTop 3s forwards; /* Apply the animation */
+@keyframes hv-chip-in-left {
+  from { opacity: 0; transform: translateY(-50%) translateX(12px); }
+  to   { opacity: 1; transform: translateY(-50%) translateX(0); }
 }
 
-/* Define the fade-in from the top animation */
-@keyframes fadeInTop {
-  from {
-    opacity: 0;
-    transform: translateY(-200px);
+/* ---------- Technologies strip ---------- */
+.hero__tech {
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding-top: var(--space-7);
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+.hero__tech-label {
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.hero__tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+.hero__tech-row li {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 2.2vw, 1.45rem);
+  color: var(--text-hi);
+  opacity: 0.5;
+  transition: opacity var(--dur) var(--ease);
+}
+.hero__tech-row li:hover { opacity: 1; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .hero__layout {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .hero__content {
+    align-items: center;
+    text-align: center;
   }
-}
-.container {
-  padding: 20px;
-}
-
-/* Styles for the h3 element */
-.keep-wel {
-  opacity: 0; /* Start with text hidden */
-  transform: translateY(-210px); /* Start with text slightly moved up */
-  animation: fadeInTop 3s forwards; /* Apply the animation */
-}
-.block-service{
-  opacity: 0; /* Start with text hidden */
-  transform: translateY(-210px); /* Start with text slightly moved up */
-  animation: fadeInTop 3s forwards; /* Apply the animation */
-}
-/* Define the fade-in from the top animation */
-
-.provide-wel2 {
-  opacity: 0; /* Start with text hidden */
-  transform: translateY(20px); /* Start with text slightly moved down */
-  animation: fadeInBottom 3s forwards; /* Apply the animation */
-  margin-bottom: 20px; /* Adjust spacing as needed */
-}
-
-
-
-
-/* Define the fade-in from the bottom animation */
-@keyframes fadeInBottom {
-  from {
-    opacity: 0;
-    transform: translateY(200px);
+  .hero__title { max-width: 100%; }
+  .hero__cta   { justify-content: center; }
+  .hero__points {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .hero__visual {
+    display: none;
   }
 }
 
-.banner-one-p {
-  opacity: 0; /* Start with the image hidden */
-  transform: translateX(200px); /* Start with the image slightly moved right */
-  animation: fadeInRight 3s forwards; /* Apply the animation */
+@media (max-width: 640px) {
+  .testi-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+  .hero__tech-row {
+    gap: clamp(1rem, 4vw, 1.5rem);
+  }
+  .hero__tech-inner {
+    justify-content: center;
+  }
+  .academy-teaser__inner {
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+  }
 }
 
-/* Define the fade-in from the right animation */
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(400px);
+/* ---------------- STATS ---------------- */
+.stats-band__grid {
+  text-align: center;
+}
+.stats-band__note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: var(--space-6);
+  font-size: var(--fs-xs);
+  color: var(--text-faint);
+  text-align: center;
+}
+.stats-band__note :deep(.icon) { color: var(--yellow); flex-shrink: 0; }
+
+/* ---------------- SERVICES HEAD ---------------- */
+.services__head {
+  align-items: flex-end;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.services__head :deep(.section-head) {
+  margin-bottom: 0;
+}
+.section-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-7);
+}
+
+/* ---------------- WHY ---------------- */
+.why-card__title {
+  font-size: 1.25rem;
+  margin: var(--space-5) 0 var(--space-3);
+}
+.why-card__text {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+/* ---------------- PROCESS ---------------- */
+.process__grid {
+  gap: var(--space-6);
+}
+.process-step {
+  padding-top: var(--space-5);
+  border-top: 2px solid var(--border);
+  transition: border-color var(--dur) var(--ease);
+}
+.process-step:hover {
+  border-top-color: var(--yellow);
+}
+.process-step__no {
+  display: block;
+  margin-bottom: var(--space-4);
+}
+.process-step__title {
+  font-size: 1.35rem;
+  margin-bottom: var(--space-3);
+}
+.process-step__text {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+/* ---------------- TECH ---------------- */
+.tech-card__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: var(--space-5);
+}
+.tech-card__label {
+  font-size: 1.15rem;
+}
+
+/* ---------------- ACADEMY TEASER ---------------- */
+.academy-teaser__inner {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  padding: clamp(2.5rem, 5vw, 4.5rem);
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+}
+.academy-teaser__content { position: relative; z-index: 1; }
+.academy-teaser__content .h2 { margin: var(--space-4) 0; max-width: 20ch; }
+.academy-teaser__content .lead { margin-bottom: var(--space-6); }
+.academy-teaser__list {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.academy-teaser__list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-base);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-weight: 500;
+  color: var(--text-hi);
+}
+.academy-teaser__list :deep(.icon) { color: var(--yellow); flex-shrink: 0; }
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+  .academy-teaser__inner {
+    grid-template-columns: 1fr;
   }
-  to {
-    opacity: 1;
-    transform: translateX(0);
+  .services__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-5);
   }
 }
-</style>
 
+/* ================================================================
+   TESTIMONIALS SLIDER
+   ================================================================ */
+.testi-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-5);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+.testi-head :deep(.section-head) { margin-bottom: 0; }
+
+/* Arrow buttons */
+.testi-nav {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.testi-nav__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elev);
+  color: var(--text-body);
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease),
+              border-color var(--dur-fast) var(--ease),
+              color var(--dur-fast) var(--ease),
+              transform var(--dur-fast) var(--ease);
+}
+.testi-nav__btn:hover {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: #0b0b0b;
+  transform: scale(1.08);
+}
+.testi-nav__btn:disabled,
+.testi-nav__btn.swiper-button-disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* Swiper container */
+.testi-swiper {
+  overflow: visible;
+  padding-bottom: 4px; /* room for card shadow */
+}
+.testi-swiper :deep(.swiper-slide) {
+  height: auto;        /* equal-height cards */
+}
+.testi-swiper :deep(.testimonial) {
+  height: 100%;
+}
+
+/* Pagination dots */
+.testi-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: var(--space-7);
+}
+.testi-pagination :deep(.swiper-pagination-bullet) {
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: var(--border-strong);
+  opacity: 1;
+  transition: width var(--dur) var(--ease),
+              background var(--dur) var(--ease);
+  cursor: pointer;
+  margin: 0 !important;
+}
+.testi-pagination :deep(.swiper-pagination-bullet-active) {
+  width: 24px;
+  background: var(--yellow);
+}
+
+@media (max-width: 640px) {
+  .testi-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}</style>
